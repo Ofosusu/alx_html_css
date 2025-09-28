@@ -1,0 +1,188 @@
+:root {
+            --color-primary: #071629;
+            --color-white: #ffffff;
+            --color-button: #C271FF;
+            --font-family-base: 'Source Sans 3', sans-serif;
+            --text-color: var(--color-white);
+        }
+
+        .highlight {
+  color: #C271FF;
+}
+
+
+        
+
+        /* Basic Reset and Global Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+    font-family: var(--font-family-base);
+    color: var(--text-color);
+    text-align: center;
+    margin: 0px;
+    background: url(images/Object.png) center center / cover no-repeat fixed;
+}
+
+
+
+        
+        h1, h2, h3, h4, p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            color: var(--color-white);
+            text-decoration: none;
+        }
+
+        /* Container for consistent layout width */
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 2rem 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            /* Using inline SVG for the logo to avoid external files */
+            width: 150px;
+        }
+        
+        .nav {
+            display: none; /* Hidden on mobile by default */
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            gap: 2.5rem; /* Space between nav items */
+        }
+        
+        .nav-item a {
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item a:hover {
+            color: var(--color-button);
+        }
+        
+        /* Hamburger menu for mobile */
+        .hamburger-menu {
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Banner Section */
+        .banner-section {
+            
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 1rem;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-content .main-title {
+            font-size: clamp(3rem, 10vw, 7.5rem); /* Responsive font size */
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-button);
+            color: var(--color-white);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 4rem;
+        }
+        
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .pros-intro {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* "Pros" Section */
+        .pros-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            margin-top: 4rem;
+        }
+        
+        .pro-card {
+            max-width: 200px;
+        }
+
+        .pro-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pro-card .pro-name {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .pro-card .pro-title {
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive design for tablets and desktops */
+        @media (min-width: 768px) {
+            .hamburger-menu {
+                display: none;
+            }
+            .nav {
+                display: block;
+            }
+        }
