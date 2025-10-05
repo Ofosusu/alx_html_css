@@ -1,290 +1,336 @@
-:root {
-            --color-primary: #071629;
-            --color-white: #ffffff;
-            --color-button: #C271FF;
-            --font-family-base: 'Source Sans 3', sans-serif;
-            --text-color: var(--color-white);
-        }
-
-        .highlight {
-  color: #C271FF;
-}
-
-
-        
-
-        /* Basic Reset and Global Styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-    font-family: var(--font-family-base);
-    color: var(--text-color);
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
     text-align: center;
-    margin: 0px;
-    background: url(images/Object.png) center center / cover no-repeat fixed;
+}
+
+/* Header */
+header {
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
 
-        
-        h1, h2, h3, h4, p {
-            margin-top: 0;
-            margin-bottom: 1rem;
-        }
-        
-        a {
-            color: var(--color-white);
-            text-decoration: none;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Container for consistent layout width */
-        .container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
 
-        /* Header Styles */
-        .header {
-            padding: 2rem 0;
-        }
+/* Hero Section */
+.hero-section {
+    
+    padding: 100px 20px;
+}
 
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.hero-section h1 {
+    font-size: 48px;
+    margin: 0 0 20px;
+}
 
-        .header-logo {
-            /* Using inline SVG for the logo to avoid external files */
-            width: 150px;
-        }
-        
-        .nav {
-            display: none; /* Hidden on mobile by default */
-        }
-        
-        .nav-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-            display: flex;
-            gap: 2.5rem; /* Space between nav items */
-        }
-        
-        .nav-item a {
-            font-weight: 700;
-            transition: color 0.3s ease;
-        }
+.hero-tags span {
+    color: white;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .nav-item a:hover {
-            color: var(--color-button);
-        }
-        
-        /* Hamburger menu for mobile */
-        .hamburger-menu {
-            display: block;
-            cursor: pointer;
-        }
+/* Pros Section */
+.pros-section {
+    padding: 60px 20px;
+    
+}
 
-        /* Banner Section */
-        .banner-section {
-            
-            background-size: cover;
-            background-position: center;
-            padding: 8rem 1rem;
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+.pros-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
-        .banner-content .main-title {
-            font-size: clamp(3rem, 10vw, 7.5rem); /* Responsive font size */
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-        }
+.pros-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        .btn-primary {
-            background-color: var(--color-button);
-            color: var(--color-white);
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            margin-bottom: 4rem;
-        }
-        
-        .btn-primary:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
+.first{
 
-        .pros-intro {
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
+    background-image: url(images/Object.png);
+}
 
-        /* "Pros" Section */
-        .pros-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-            margin-top: 4rem;
-        }
-        
-        .pro-card {
-            max-width: 200px;
-        }
+.pro-item p {
+    margin: 5px 0;
+    color: white;
+}
 
-        .pro-card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 0.5rem;
-        }
-        
-        .pro-card .pro-name {
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
+/* Testimonial Section */
+.testimonial-section {
+    
+    background-color: #c271ff;
+    color: white;
+    padding: 60px 20px;
+}
 
-        .pro-card .pro-title {
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive design for tablets and desktops */
-        @media (min-width: 768px) {
-            .hamburger-menu {
-                display: none;
-            }
-            .nav {
-                display: block;
-            }
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+#pic {
+    
+    padding-right: 1000px;
+    padding-top:200px ;
+    position: relative;
+    padding-right: 500px;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
 
-        .quote-section {
-            width: 100%;
-            background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
-            padding: 60px 40px;
-            position: relative;
-            overflow: hidden;
-        }
+.testimonial-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-        .quote-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.9) 0%, rgba(168, 85, 247, 0.8) 50%, rgba(192, 132, 252, 0.7) 100%);
-        }
 
-        .quote-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
-        .profile-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-        }
+blockquote {
+    font-size: 22px;
+    margin: 0 0 20px;
+    font-style: italic;
+}
 
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.author {
+    font-size: 18px;
+}
 
-        .quote-text-container {
-            flex: 1;
-        }
+/* Tutorials Section */
+.tutorials-section {
+    padding: 60px 20px;
+}
 
-        .quote-text {
-            color: white;
-            font-size: 18px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
+.tutorials-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
-        .person-info {
-            color: rgba(255, 255, 255, 0.9);
-        }
+.tutorials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .person-name {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
+.tutorial-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
 
-        .person-title {
-            font-size: 14px;
-            opacity: 0.8;
-            font-weight: 400;
-        }
+.tutorial-card h3 {
+    margin-top: 0;
+}
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .quote-section {
-                padding: 40px 24px;
-            }
+/* Membership Section */
+.membership-section {
+    background-color: #0a0412;
+    background-color: ;
+    color: white;
+    padding: 60px 20px;
+}
 
-            .quote-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
+.membership-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
 
-            .quote-text {
-                font-size: 16px;
-            }
-        }
+.membership-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
 
-        
+.membership-item {
+    width: 220px;
+}
+
+.membership-item h3 {
+    font-size: 18px;
+}
+
+button {
+    background-color: #c271ff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 20px;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    width: 45%;
+}
+
+.faq-item h3 {
+    margin-top: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0412;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* Main section wrapper */
+.quotes-section {
+    background-color: #6a0dad; /* Purple background */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for both avatar and text content */
+.quote-container {
+    display: flex; /* Aligns items side-by-side */
+    align-items: center; /* Vertically centers the items */
+    max-width: 900px;
+    width: 100%;
+    color: white;
+    text-align: left;
+    gap: 30px; /* Space between avatar and text */
+}
+
+/* Wrapper for the avatar image */
+.quote-avatar {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Clips the image to the circular shape */
+    border: 2px solid white;
+}
+
+/* The actual avatar image */
+.quote-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the circle without distortion */
+    display: block;
+}
+
+/* Wrapper for all the text */
+.quote-content {
+    flex-grow: 1; /* Allows this element to take up available space */
+}
+
+/* Styling for all paragraphs inside the content area */
+.quote-content p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Specifically target the main quote text */
+.quote-content p:first-child {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* Styling for the person's name */
+.quote-content .person-name {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* Styling for the person's title or role */
+.quote-content .person-title {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* --- Responsive Design for Mobile --- */
+/* This block applies only to screens 768px wide or smaller */
+@media (max-width: 768px) {
+    .quote-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center the text */
+        gap: 20px;
+    }
+
+    .quote-avatar {
+        margin-bottom: 15px; /* Add space below avatar when stacked */
+    }
+}
+
+
+.bingo img {
+    width: 15px;
+    height: 15px;
+}
+
+
+.footer-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
